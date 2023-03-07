@@ -77,10 +77,10 @@
                                         <div class="p-2">
 
                                         </div>
-                                        <div class="">
+                                        <div>
                                             <div class="table-responsive">
-                                                <table id="datatable-buttons"
-                                                    class="table table-striped table-bordered dt-responsive nowrap"
+                                                <table
+                                                    id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
                                                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                     <thead>
                                                         <tr>
@@ -95,6 +95,10 @@
                                                             </td>
                                                             <td class="text-center"><strong>Unit Price</strong>
                                                             </td>
+
+                                                            <td class="text-center"><strong>Total Amount</strong>
+                                                            </td>
+
 
 
                                                         </tr>
@@ -116,6 +120,7 @@
                                                                 </td>
                                                                 <td class="text-center"> {{ $pro->selling_qty }} </td>
                                                                 <td class="text-center"> {{ $pro->unit_price }} </td>
+                                                                <td class="text-center"> {{ $pro->unit_price  *  $pro->selling_qty }}</td>
                                                             </tr>
 
                                                             @php
@@ -134,6 +139,7 @@
                                                             <td class="thick-line text-center">{{ $total_selling_qty }}
                                                             </td>
                                                         </tr>
+
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -158,12 +164,6 @@
 
                                 </div>
                             </div> <!-- end row -->
-
-
-
-
-
-
                         </div>
                     </div>
                 </div> <!-- end col -->

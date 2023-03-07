@@ -50,25 +50,24 @@
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="username" name="username" type="text"
-                                        required="" placeholder="Username">
+                                        placeholder="Username">
                                 </div>
+
+                                @error('username')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="password" name="password" type="password"
-                                        required="" placeholder="Password">
+                                        placeholder="Password">
                                 </div>
+                                @error('password')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
-                            <div class="form-group mb-3 row">
-                                <div class="col-12">
-                                    <div class="custom-control custom-checkbox">
-
-
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="form-group mb-3 text-center row mt-3 pt-1">
                                 <div class="col-12">

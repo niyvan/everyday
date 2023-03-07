@@ -47,46 +47,54 @@
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="name" type="text" name="name"
-                                        required="" placeholder="Name">
+                                        placeholder="Name">
                                 </div>
+                                @error('name')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="username" type="text" name="username"
-                                        required="" placeholder="UserName">
+                                        placeholder="UserName">
                                 </div>
+                                @error('username')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="email" type="email" name="email"
-                                        required="" placeholder="Email">
+                                        placeholder="Email">
                                 </div>
+                                @error('email')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="password" type="password" name="password"
-                                        required="" placeholder="Password">
+                                        placeholder="Password">
                                 </div>
+                                @error('password')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <input class="form-control" id="password_confirmation" type="password"
-                                        name="password_confirmation" required="" placeholder="Password Confirmation">
+                                        name="password_confirmation" placeholder="Password Confirmation">
                                 </div>
+                                @error('password_confirmation')
+                                    <span class="fs-6 text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
-                            <div class="form-group mb-3 row">
-                                <div class="col-12">
-                                    <div class="custom-control custom-checkbox">
-
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="form-group text-center row mt-3 pt-1">
                                 <div class="col-12">

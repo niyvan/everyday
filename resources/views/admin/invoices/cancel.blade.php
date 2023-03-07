@@ -25,9 +25,9 @@
                             </h4>
                             <a href="{{ route('invoice.pending.list') }}"
                                 class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;"><i
-                                    class="fa fa-list"> Pending Invoice List </i></a> <br> <br>
+                                    class="fa fa-list"> Pending Invoices</i></a> <br> <br>
 
-                            <table class="table table-dark" width="100%">
+                            <table class="table" width="100%">
                                 <tbody>
                                     <tr>
                                         <td>
@@ -57,13 +57,13 @@
 
                             <form method="post" action="{{ route('cancelled.invoice', $invoice->id) }}">
                                 @csrf
-                                <table border="1" class="table table-dark" width="100%">
+                                <table border="1" class="table" width="100%">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Sl</th>
                                             <th class="text-center">Category</th>
                                             <th class="text-center">Product Name</th>
-                                            <th class="text-center" style="background-color: #8B008B">Current Stock</th>
+                                            <th class="text-center" >Current Stock</th>
                                             <th class="text-center">Quantity</th>
                                             <th class="text-center">Unit Price </th>
                                             <th class="text-center">Total Price</th>
@@ -87,7 +87,7 @@
                                                 <td class="text-center">{{ $key + 1 }}</td>
                                                 <td class="text-center">{{ $details['category']['name'] }}</td>
                                                 <td class="text-center">{{ $details['product']['name'] }}</td>
-                                                <td class="text-center" style="background-color: #8B008B">
+                                                <td class="text-center" >
                                                     {{ $details['product']['quantity'] }}</td>
                                                 <td class="text-center">{{ $details->selling_qty }}</td>
                                                 <td class="text-center">{{ $details->unit_price }}</td>

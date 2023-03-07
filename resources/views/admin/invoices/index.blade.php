@@ -72,7 +72,7 @@
 
                                                 <a href="{{ route('invoice.cancel', $item->id) }}"
                                                     class="btn btn-danger btn-sm sm" title="Cancel Invoice"> <i
-                                                        class="fa fa-edit"></i> </a>
+                                                    class="fa fa-minus-circle"></i> </a>
                                             </td>
                                         </tr>
                                     @endforeach

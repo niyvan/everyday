@@ -3,14 +3,14 @@
         <div class="container-fluid">
             @php
                 $category = App\Models\Category::all();
-                $product = App\Models\Product::where('quantity', '<', '3')->get();
+                $product = App\Models\Product::where('quantity', '<', '5')->get();
                 $total_invoice = App\Models\Invoice::where('status', '=', '1')
                     ->get()
                     ->count();
                 $total_payment = App\Models\Payment::where('paid_status', '=', 'full_paid')
                     ->get()
                     ->sum('paid_amount');
-
+                
             @endphp
             <!-- start page title -->
             <div class="row">
